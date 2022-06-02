@@ -1,4 +1,4 @@
-name: CI # как назвать - выбираете сами
+name: ci-image # как назвать - выбираете сами
 on:
   push:
     branches:
