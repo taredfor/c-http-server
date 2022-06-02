@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       # move to another branch or repository
       - run: docker build . -t c-server
-      - run: docker run -v "$(pwd):/app" c-server build
+      - run: docker run -v "$(pwd):/app" c-server
       - uses: actions/upload-artifact@v3
         with:
           name: c-server
