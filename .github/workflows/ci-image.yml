@@ -19,8 +19,6 @@ jobs:
       - uses: docker/build-push-action@v1
       - uses: actions/upload-artifact@v3
         with:
-          name: my_artifact
-          path: /app/c-server.bin
           username: ${{ github.actor }}
           password: ${{ github.token }}
           registry: ${{ env.GHCR_REGISTRY }}
