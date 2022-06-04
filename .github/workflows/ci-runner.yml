@@ -8,7 +8,7 @@ jobs:
    runs-on: ubuntu-20.04
    steps:
      - uses: actions/checkout@v3
-     - run: docker build -t c-server
+     - run: docker build . -t c-server
      - run: docker run -v "$pwd:/app" c-server build
      - uses: actions/upload-artifact@v3
        with:
