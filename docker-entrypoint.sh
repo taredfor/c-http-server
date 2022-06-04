@@ -1,14 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-if [[$#==0]]; then
+if [[ $# == 0 ]]; then
   echo 'Error: specify command'
   echo 'available commands:'
   echo ' build - install and build'
   echo ' other (like bash)'
-  exit  
+  exit  1
 fi
 
-case "$@" in 
+case "$1" in 
 build)
  	gcc -Wall -Wpedantic main.c mongoose.c -o c-server.bin
 	;;

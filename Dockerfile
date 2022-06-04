@@ -2,10 +2,10 @@ FROM buildpack-deps:bullseye as build
 
 WORKDIR /app
 
-COPY . .
+#COPY . .
 
-COPY docker-entrypoint.sh /usr/local/bin
+COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-CMD ["docker-entrypoint.sh" ]
+ENTRYPOINT ["docker-entrypoint.sh" ]
